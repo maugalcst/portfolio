@@ -12,10 +12,31 @@
   --project_card_bottom: #171717;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: -webkit-linear-gradient(top, #fbb989, #8b95fd);
+}
+
 html{
   background: linear-gradient(var(--background_top), var(--background_bottom));
   height: fit-content;
   z-index: -2;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -37,12 +58,11 @@ body{
 }
 
 .luz_tenue {
-  background: -webkit-linear-gradient(top, var(--font-gradient-orange) 55%, var(--font-gradient-blue) 40%);
-  width: 700px;
-  height: 580px;
-  border-bottom-left-radius: 400px;
-  border-bottom-right-radius: 400px;
-  filter: blur(26rem);
+  background: -webkit-linear-gradient(top, var(--font-gradient-orange) 20%, var(--font-gradient-blue) 99%);
+  width: 400px;
+  height: 880px;
+  filter: blur(46rem);
+  opacity: 0.6;
   position: absolute;
   top: 0;
   left: 25%;
@@ -360,18 +380,23 @@ body{
 .project {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 0px;
   justify-content: center;
   align-items: center;
 }
 
-.project_info, .project_img {
+.project_info {
   margin: 20px;
+  height: auto;
+}
+
+.project_img {
+  margin: 20px;
+  height: 360px;
 }
 
 .project_info {
-  width: 40%;
-  height: 400px;
+  width: 45%;
   background: linear-gradient(var(--project_card_top), var(--project_card_bottom));
   border: 1px solid;
   border-radius: 20px;
@@ -399,11 +424,177 @@ body{
 }
 
 .project_img {
-  width: 300px;
-  height: fit-content;
+  width: 520px;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.project_img > img {
-  width: 400px;
-  height: fit-content;
+#gastrack_cont {
+  background: linear-gradient(#12112B, #613D2E);
+}
+
+#moonhike_cont {
+  background: linear-gradient(#FFDCB4, #7986FB);
+}
+
+.gastrack_img {
+  width: fit-content;
+  height: 390px;
+  justify-self: center;
+  align-self: center;
+  transition: transform 1.3s ease;
+}
+
+.moonhike_img {
+  height: 310px;
+  transition: transform 1.3s ease;
+}
+
+.moonhike_img:hover,
+.gastrack_img:hover{
+  transform: scale(1.05);
+}
+
+.project_stack{
+  margin: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stack_item {
+  width: auto;
+  height: 22px;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flutter_label {
+  background-color: #293d5169;
+}
+
+#firebase_label {
+  background-color: #59422756;
+}
+
+#google_label {
+  background-color: #44583856;
+}
+
+.stack_item > i {
+  position: relative;
+  font-size: 23px;
+  padding-right: 5px;
+}
+
+.see_repo {
+  background: transparent;
+  border: transparent;
+  color: rgb(103, 184, 255);
+  font-size: 18px;
+  position: relative;
+  float: right;
+  margin: 0px;
+  bottom: 20px;
+  right: 30px;
+  transition: all 0.2s ease;
+}
+
+.see_repo:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.see_repo:active {
+  color: rgb(253, 180, 108);
+  cursor: pointer;
+}
+
+.luz_tenue2 {
+  background: -webkit-linear-gradient(top, var(--font-gradient-orange) 1%, var(--font-gradient-blue) 99%);
+  width: 600px;
+  height: 580px;
+  filter: blur(12rem);
+  position: absolute;
+  top: 0;
+  left: 25%;
+  transform: translateY(380%);
+  left: -10rem;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.filter_buttons_container {
+  position: relative;
+  max-width: 1350px;
+  width: 100%;
+}
+
+.filter_buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter_buttons > button {
+  padding: 20px 40px;
+  background: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.filter_buttons > button.active {
+  background: rgb(93, 166, 255);
+  color: white;
+}
+
+.filterable_skills {
+  margin: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  flex-basis: 190px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--background_top), var(--background_bottom));
+  border-radius: 20px;
+  height: 170px;
+}
+
+.skill img {
+  width: 80px;
+}
+
+.skill_name {
+  color: white;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", monospace;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.skill.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }

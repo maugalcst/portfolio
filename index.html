@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
   <title>Portfolio</title>
 </head>
 
@@ -79,25 +80,106 @@
         <div class="project_info">
           <h1 class="project_title">GasTrack</h1>
           <p class="project_desc">GasTrack is a mobile app designed for <a href="https://vixomedia.com.mx/" target="_blank" class="link">Vixomedia</a> to track vehicle fuel efficiency and store performance reports. It streamlines monitoring gas usage and ensures detailed, organized data for fleet management.</p>
+          <div class="project_stack">
+            <div class="stack_item" id="flutter_label"><i class='bx bxl-flutter' style='color:#00a6ff'></i>flutter</div>
+            <div class="stack_item"id="firebase_label"><i class='bx bxl-firebase' style='color:#ff8800' ></i>firebase</div>
+          </div>
+          <button class="see_repo" onclick="window.open('https://github.com/maugalcst/gastrack')">see repo</button>
         </div>
-        <div class="project_img">
-          <img src="assets/images/gastrack.png" alt="moonhike">
+        <div class="project_img" id="gastrack_cont">
+          <img class="gastrack_img" src="assets/images/gastrack.png" alt="moonhike">
         </div>
       </div>
+
+      <div class="luz_tenue2"></div>
 
       <div class="project">
         <div class="project_info">
           <h1 class="project_title">MoonHike</h1>
-          <p class="project_desc">MoonHike is a smart navigation app focused on safety, offering optimized routes, real-time risk analysis, and incident reporting. With features like incident reporting and dynamic location tracking, it empowers users to navigate securely while contributing to community safety.</p>
+          <p class="project_desc">MoonHike is a navigation app designed for pedestrians, offering safe routes, real-time risk analysis, and incident reporting to ensure secure city walking while promoting community safety. </p>
+          <div class="project_stack">
+            <div class="stack_item" id="flutter_label"><i class='bx bxl-flutter' style='color:#00a6ff'></i>flutter</div>
+            <div class="stack_item"id="firebase_label"><i class='bx bxl-firebase' style='color:#ff8800' ></i>firebase</div>
+            <div class="stack_item"id="google_label"><i class='bx bxl-google' style='color:#ffffff' ></i>Google API</div>
+          </div>
+          <button class="see_repo" onclick="window.open('https://github.com/AlexGoodD/moonhike')">see repo</button>
         </div>
-        <div class="project_img">
-          <img src="assets/images/moonhike.png" alt="moonhike">
+        <div class="project_img" id="moonhike_cont">
+          <img class="moonhike_img" src="assets/images/moonhike.png" alt="moonhike">
         </div>
       </div>
+    </div>
+  </section>
 
+  <div class="espaciado2"></div>
+
+  <section class="skills_section">
+    <h1 class="projects_title">SKILLS &<br><strong class="last_name">TOOLS</strong></h1>
+    <p class="projects_subtitle">Some cool stuff i’ve learned :)</p>
+
+    <div class="filter_buttons_container">
+      <div class="filter_buttons">
+        <button data-name="all" class="active">Show All</button>
+        <button data-name="frontend">Frontend Development</button>
+        <button data-name="backend">Backend Development</button>
+        <button data-name="mobile">Mobile</button>
+        <button data-name="other">Other Tools</button>
+      </div>
+    </div>
+    <div class="filterable_skills">
+      <div class="skill" data-name="backend">
+        <img src="assets/skills_img/java.png" alt="java logo">
+        <p class="skill_name">Java</p>
+      </div>
+      <div class="skill" data-name="backend">
+        <img src="assets/skills_img/python.png" alt="python logo">
+        <p class="skill_name">Python</p>
+      </div>
+      <div class="skill" data-name="backend">
+        <img src="assets/skills_img/c.png" alt="c logo">
+        <p class="skill_name">C</p>
+      </div>
+      <div class="skill" data-name="mobile">
+        <img src="assets/skills_img/dart.png" alt="dart logo">
+        <p class="skill_name">Dart</p>
+      </div>
+      <div class="skill" data-name="frontend">
+        <img src="assets/skills_img/javascript.png" alt="javascript logo">
+        <p class="skill_name">JavaScript</p>
+      </div>
+      <div class="skill" data-name="backend">
+        <img src="assets/skills_img/firebase.png" alt="firebase logo">
+        <p class="skill_name">Firebase</p>
+      </div>
+      <div class="skill" data-name="backend">
+        <img src="assets/skills_img/pgsql.png" alt="postgreSQL logo">
+        <p class="skill_name">PostgreSQL</p>
+      </div>
+      <div class="skill" data-name="frontend">
+        <img src="assets/skills_img/html.png" alt="html logo">
+        <p class="skill_name">HTML</p>
+      </div>
+      <div class="skill" data-name="frontend">
+        <img src="assets/skills_img/css.png" alt="css logo">
+        <p class="skill_name">CSS</p>
+      </div>
+      <div class="skill" data-name="mobile">
+        <img src="assets/skills_img/flutter.png" alt="flutter logo">
+        <p class="skill_name">Flutter</p>
+      </div>
+      <div class="skill" data-name="other">
+        <img src="assets/skills_img/git.png" alt="git logo">
+        <p class="skill_name">Git</p>
+      </div>
+      <div class="skill" data-name="other">
+        <img src="assets/skills_img/vscode.png" alt="vscode logo">
+        <p class="skill_name">VSCode</p>
+      </div>
+      <div class="skill" data-name="other">
+        <img src="assets/skills_img/intellij.png" alt="intellij logo">
+        <p class="skill_name">Intellij Idea</p>
+      </div>
     </div>
   </section>
 </body>
-
-<script src="script.js"></script>
 </html>
