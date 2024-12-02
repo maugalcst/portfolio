@@ -1,0 +1,409 @@
+:root {
+  --background_top: #1E1E1E;
+  --background_bottom: #000000;
+  --font-gradient-orange: #fd9c57;
+  --font-gradient-blue: #3e4df9;
+  --nav_right: #161616;
+  --nav_left: #252525;
+
+  --whoami1: rgba(0, 0, 0, 0.16);
+  --whoami2: rgba(102, 102, 102, 0.16);
+  --project_card_top: #2A2A2A;
+  --project_card_bottom: #171717;
+}
+
+html{
+  background: linear-gradient(var(--background_top), var(--background_bottom));
+  height: fit-content;
+  z-index: -2;
+}
+
+body{
+  padding-top: 20px;
+  padding-left: 230px;
+  padding-right: 230px;
+}
+
+.espaciado {
+  height: 70px;
+  width: auto;
+  background: transparent;
+}
+
+.espaciado2 {
+  height: 400px;
+  width: auto;
+  background: transparent;
+}
+
+.luz_tenue {
+  background: -webkit-linear-gradient(top, var(--font-gradient-orange) 55%, var(--font-gradient-blue) 40%);
+  width: 700px;
+  height: 580px;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+  filter: blur(26rem);
+  position: absolute;
+  top: 0;
+  left: 25%;
+  transform: translateY(-10%);
+  z-index: 0;
+}
+
+.logo_mau {
+  font-family: "Lekton", monospace;
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 45px;
+  margin: 0;
+  z-index: 3;
+}
+
+.superior_navbar {
+  background: -webkit-linear-gradient(right, var(--nav_right), var(--nav_left));
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.383);
+  border-radius: 50px;
+  height: 60px;
+  width: 350px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 3;
+}
+
+.nav_button {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.bxnav {
+  color: white;
+  font-size: 35px;
+}
+
+.presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.title_container {
+  position: relative;
+  top: 110px;
+}
+
+.salute {
+  font-size: 22px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.526);
+  padding-top: 40px;
+  margin: 0;
+}
+
+.title_name {
+  font-size: 80px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  line-height: 120px;
+  margin: 0;
+}
+
+.last_name {
+  background: -webkit-linear-gradient(left, var(--font-gradient-orange), var(--font-gradient-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 300;
+  font-family: "JetBrains Mono", monospace;
+  color: white;
+  padding-top: 18px;
+  padding-bottom: 8rem;
+  margin: 0;
+}
+
+.profile_image_container{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 95px;
+  width: 320px;
+  height: 420px;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.profile_image_container > img {
+  width: 280px;
+  margin: 20px;
+}
+
+.profile_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.profile_buttons > button {
+  background: white;
+  border: transparent;
+  height: 40px;
+  width: 60px;
+  margin-inline: 15px;
+}
+
+.profile_buttons > button > i {
+  font-size: 40px;
+  display: inline-block; 
+  transition: transform 0.3s ease;
+}
+
+.profile_buttons > button > i:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.profile_buttons > button > i:active {
+  color: rgba(0, 0, 0, 0.788);
+}
+
+.personal_section {
+  position: relative;
+  top: 15rem;
+  background: rgba(255, 255, 255, 0);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who_am_i_container,
+.my_uni_container,
+.status_container {
+  margin: 10px;
+}
+
+.who_am_i_container {
+  background: -webkit-linear-gradient(right, var(--whoami1), var(--whoami2));
+  height: fit-content;
+  width: 824rem;
+  display: grid;
+  grid-template-columns: 4fr 1.8fr;
+  border: solid 1.5px rgba(255, 255, 255, 0.188);
+  border-radius: 20px;
+}
+
+  .who_am_i_container > p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 28px;
+  }
+
+  .mexico{
+    background: -webkit-linear-gradient(left, rgb(109, 221, 109), white, rgb(251, 116, 116));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .who_am_i_container > h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-weight: 900;
+  text-align: end;
+  color: white;
+  margin: 28px;
+  position: relative;
+  top: 50px;
+  }
+
+.my_uni_container {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.908));
+  border-radius: 20px;
+  height: fit-content;
+  padding-bottom: 20px;
+  width: 660px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+}
+
+.my_uni_border {
+  background: -webkit-linear-gradient(left, var(--font-gradient-orange), var(--font-gradient-blue));
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.my_uni_container:hover{
+  border-color: #bcc2fe;
+}
+
+.my_uni_container > p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: white;
+  margin-left: 80px;
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+.my_uni_container > img {
+  justify-self: center;
+  align-self: center;
+  height: 160px;
+}
+
+.status_container {
+  background: -webkit-linear-gradient(right, #101010, #000000);
+  border: 1.5px solid;
+  border-color: rgba(255, 255, 255, 0.183);
+  border-radius: 20px;
+  height: 260px;
+  width: 460px;
+}
+
+.status_title {
+  display: flex;
+  flex-direction: row;
+}
+
+.status_title > div {
+  background: #41ff54;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  margin-top: 39px;
+  margin-inline: 20px;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.status_title > h3 {
+  font-family: "Plus Jakarta Sans", monospace;
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  margin-top: 28px;
+}
+
+.status_container > p {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 200;
+  font-size: 23px;
+  margin: 30px;
+  margin-left: 45px;
+  color: white;
+}
+
+.proejcts_section {
+  position: absolute;
+  top: 30px;
+}
+
+.projects_title {
+  font-family: "Plus Jakarta Sans", monospace;
+  font-size: 78px;
+  font-weight: 900;
+  color: white;
+}
+
+.projects_title > i {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+.projects_subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 34px;
+  color: white;
+
+}
+
+.projects_containers {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  width: auto;
+  height: 45rem;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_info, .project_img {
+  margin: 20px;
+}
+
+.project_info {
+  width: 40%;
+  height: 400px;
+  background: linear-gradient(var(--project_card_top), var(--project_card_bottom));
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.298);
+}
+
+.project_title, .project_desc{
+  margin: 45px;
+  color: white;
+  font-family: "Plus Jakarta Sans", monospace;
+}
+
+.project_title {
+  font-size: 45px;
+}
+
+.project_desc {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.link {
+  text-decoration: none;
+  color: #fd9c57;
+}
+
+.project_img {
+  width: 300px;
+  height: fit-content;
+}
+
+.project_img > img {
+  width: 400px;
+  height: fit-content;
+}

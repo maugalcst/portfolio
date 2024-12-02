@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lekton:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Portfolio</title>
+</head>
+
+<div class="luz_tenue"></div>
+<header>
+  <div class="logo_mau">>$mau /home/</div>
+  <nav class="superior_navbar">
+    <button id="Home" class="nav_button"><i class='bx bxnav bx-home-alt'></i></button>
+    <button id="Projects" class="nav_button"><i class='bx bxnav bxs-package' ></i></button>
+    <button id="Skills" class="nav_button"><i class='bx bxnav bx-wrench' ></i></button>
+    <button id="Contact" class="nav_button"><i class='bx bxnav bx-briefcase-alt-2' ></i></button>
+  </nav>
+</header>
+
+<body>
+  <div class="espaciado"></div>
+
+  <div class="presentacion">
+    <div class="title_container">
+      <h3 class="salute">Hello there! i am-</h3>
+      <h1 class="title_name">Mauricio <strong class="last_name">Gallegos</strong>.</h1>
+      <h2 class="subtitle">Software Engineer<br>Undergrad</h2>
+    </div>
+  
+    <div class="profile_image_container">
+      <img src="assets/images/profile.png" alt="profile pic" class="profile_image">
+      <div class="profile_buttons">
+        <button onclick="window.open('https://www.linkedin.com/in/mau-gallegos-69a25223b/', '_blank')"><i class='bx bxl-linkedin-square' ></i></button>
+        <button onclick="window.open('mailto:maugal.cst@gmail.com', '_blank')"><i class='bx bxl-gmail' ></i></button>
+        <button onclick="window.open('https://github.com/maugalcst', '_blank')"><i class='bx bxl-github' ></i></button>
+      </div>
+    </div>
+  </div>
+  
+  <section class="personal_section">
+    <div class="who_am_i_container">
+      <p>
+        I am a Software Engineering student from Monterrey, <span class="mexico">México</span>🇲🇽. I’m passionate about <strong>creating innovative and creative solutions that make a difference.</strong> My goal is to contribute to the development of technologies that drive change and efficiency, always with a focus on quality and innovation.<br><br>When i’m not coding, i like to play tennis  with friends or go out hiking  ⛰️
+      </p>
+      <h1>
+        And... Who am i?
+      </h1>
+    </div>
+    <div class="my_uni_border">
+      <div class="my_uni_container">
+        <p>
+          I’m studying Software Engineering in <strong>Universidad Autónoma de Nuevo León</strong>, Facultad de Ingeniería Mecánica y Eléctrica FIME
+        </p>
+        <img src="assets/images/uanl_logo.png" alt="UANL LOGO">
+      </div>
+    </div>
+    <div class="status_container">
+      <div class="status_title">
+        <div class="green_dot"></div>
+        <h3>status</h3>
+      </div>
+      <p>currently looking for internships to expand my knowledge and contribute to impactful projects.</p>
+    </div>
+  </section>
+
+  <div class="espaciado2"></div>
+
+  <section class="projects_section">
+    <h1 class="projects_title">RECENT<i class='bx bxs-package'></i><br><strong class="last_name">PROJECTS</strong></h1>
+    <p class="projects_subtitle">These are some of my most recent projects, all made with dedication and love.</p>
+    <div class="projects_containers">
+
+      <div class="project">
+        <div class="project_info">
+          <h1 class="project_title">GasTrack</h1>
+          <p class="project_desc">GasTrack is a mobile app designed for <a href="https://vixomedia.com.mx/" target="_blank" class="link">Vixomedia</a> to track vehicle fuel efficiency and store performance reports. It streamlines monitoring gas usage and ensures detailed, organized data for fleet management.</p>
+        </div>
+        <div class="project_img">
+          <img src="assets/images/gastrack.png" alt="moonhike">
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project_info">
+          <h1 class="project_title">MoonHike</h1>
+          <p class="project_desc">MoonHike is a smart navigation app focused on safety, offering optimized routes, real-time risk analysis, and incident reporting. With features like incident reporting and dynamic location tracking, it empowers users to navigate securely while contributing to community safety.</p>
+        </div>
+        <div class="project_img">
+          <img src="assets/images/moonhike.png" alt="moonhike">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+<script src="script.js"></script>
+</html>
