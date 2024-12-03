@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // dark mode logic
+
+  
+  
+  // filter skills logic
+  
   const filterButtons = document.querySelectorAll(".filter_buttons button");
   const filterableSkills = document.querySelectorAll(".filterable_skills .skill");
 
