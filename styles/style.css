@@ -32,11 +32,23 @@ body {
   padding-top: 20px;
   padding-left: 230px;
   padding-right: 230px;
-  background-size: 20px 20px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.159) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.159) 1px, transparent 1px);
   z-index: -5;
 }
 
+.grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 350vh;
+  background-size: 10px 10px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.251) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.251) 1px, transparent 1px);
+  animation: bgblink 5s ease-in-out infinite;
+  z-index: -4;
+}
+
+@keyframes bgblink {}
 .espaciado {
   height: 70px;
   width: auto;
@@ -50,22 +62,23 @@ body {
 }
 
 .luz_tenue {
-  background: linear-gradient(to bottom, #fd9c57, #3e4df9);
-  background: -webkit-linear-gradient(top, #fd9c57, #3e4df9);
-  width: 400px;
-  height: 880px;
-  filter: blur(46rem);
-  opacity: 0.6;
+  background: linear-gradient(to bottom, #FF8E3D, #3949ff);
+  background: -webkit-linear-gradient(top, #FF8E3D, #3949ff);
   position: absolute;
+  padding: 0;
+  margin: 0;
   top: 0;
-  left: 50%;
-  transform: translateY(-10%);
-  z-index: 0;
+  left: 38%;
+  height: 870px;
+  width: 870px;
+  border-radius: 0px 0px 50% 50%;
+  filter: blur(12rem);
+  opacity: 0.4;
 }
 
 .luz_tenue2 {
-  background: linear-gradient(to bottom, #fd9c57 1%, #3e4df9 99%);
-  background: -webkit-linear-gradient(top, #fd9c57 1%, #3e4df9 99%);
+  background: linear-gradient(to bottom, #FF8E3D 1%, #3949ff 99%);
+  background: -webkit-linear-gradient(top, #FF8E3D 1%, #3949ff 99%);
   width: 600px;
   height: 580px;
   filter: blur(12rem);
@@ -88,16 +101,46 @@ body {
   padding: 45px;
   margin: 0;
   z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logo_mau div {
+  position: relative;
+  bottom: 2px;
+  left: 2px;
+  width: 8px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.397);
+  animation: blinker 1s step-start infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .change_theme {
   width: 45px;
   height: 45px;
   position: fixed;
+  background: rgba(255, 255, 255, 0.066);
+  border-radius: 50px;
+  border: transparent;
+  margin-inline: 20px;
+  right: 0;
+}
+.change_theme:hover {
+  cursor: pointer;
+}
+.change_theme i {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
 }
 
-.off {
-  color: #000000;
+button.change_theme i.off {
+  display: none;
 }
 
 .superior_navbar {
@@ -115,16 +158,21 @@ body {
   justify-content: space-evenly;
   z-index: 3;
 }
-
-.nav_button {
+.superior_navbar button {
   background: none;
   border: none;
   box-shadow: none;
 }
-
-.bxnav {
+.superior_navbar button .nav1, .superior_navbar button .nav2, .superior_navbar button .nav3, .superior_navbar button .nav4 {
   color: white;
   font-size: 35px;
+  transition: all 0.2s ease;
+}
+.superior_navbar button .nav1:hover, .superior_navbar button .nav2:hover, .superior_navbar button .nav3:hover, .superior_navbar button .nav4:hover {
+  color: rgb(255, 131, 15);
+  margin-inline: 4px;
+  font-size: 38px;
+  cursor: pointer;
 }
 
 .presentacion {
@@ -159,7 +207,7 @@ body {
 }
 
 .last_name {
-  background: -webkit-linear-gradient(left, #fd9c57, #3e4df9);
+  background: -webkit-linear-gradient(left, #FF8E3D, #3949ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -300,7 +348,7 @@ body {
 }
 
 .my_uni_border {
-  background: -webkit-linear-gradient(left, #fd9c57, #3e4df9);
+  background: -webkit-linear-gradient(left, #FF8E3D, #3949ff);
   border-radius: 20px;
   display: inline-block;
 }
@@ -473,7 +521,7 @@ body {
 .stack_item {
   width: auto;
   height: 22px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 8px;
   color: white;
   font-size: 20px;

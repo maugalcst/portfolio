@@ -36,12 +36,31 @@ body {
   padding-top: 20px;
   padding-left: 230px;
   padding-right: 230px;
-  background-size: 20px 20px;
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.159) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.159) 1px, transparent 1px);
   z-index: -5;
 }
+
+
+.grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 350vh;
+  background-size: 10px 10px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.251) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.251) 1px, transparent 1px);
+  animation: bgblink 5s ease-in-out infinite;
+  z-index: -4;
+}
+
+@keyframes bgblink {
+  50% {
+    //opacity: 0;
+  }
+}
+
 
 .espaciado {
   height: 70px;
@@ -57,15 +76,16 @@ body {
 
 .luz_tenue {
   @include gradient($font-gradient-orange, $font-gradient-blue);
-  width: 400px;
-  height: 880px;
-  filter: blur(46rem);
-  opacity: 0.6;
   position: absolute;
+  padding: 0;
+  margin: 0;
   top: 0;
-  left: 50%;
-  transform: translateY(-10%);
-  z-index: 0;
+  left: 38%;
+  height: 870px;
+  width: 870px;
+  border-radius: 0px 0px 50% 50%;
+  filter: blur(12rem);
+  opacity: 0.4;
 }
 
 .luz_tenue2 {
@@ -93,16 +113,51 @@ body {
   padding: 45px;
   margin: 0;
   z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+    width: 8px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.397);
+    animation: blinker 1s step-start infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 .change_theme {
   width: 45px;
   height: 45px;
   position: fixed;
+  background: rgba(255, 255, 255, 0.066);
+  border-radius: 50px;
+  border: transparent;
+  margin-inline: 20px;
+  right: 0;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  i {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
 }
 
-.off {
-  color: #000000;
+button.change_theme i.off {
+  display: none;
 }
 
 .superior_navbar {
@@ -119,17 +174,25 @@ body {
   display: flex;
   justify-content: space-evenly;
   z-index: 3;
-}
 
-.nav_button {
-  background: none;
-  border: none;
-  box-shadow: none;
-}
+  button {
+    background: none;
+    border: none;
+    box-shadow: none;
 
-.bxnav {
-  color: white;
-  font-size: 35px;
+    .nav1, .nav2, .nav3, .nav4{
+      color: white;
+      font-size: 35px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: rgb(255, 131, 15);
+        margin-inline: 4px;
+        font-size: 38px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .presentacion {
@@ -492,7 +555,7 @@ body {
 .stack_item {
   width: auto;
   height: 22px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 8px;
   color: white;
   font-size: 20px;

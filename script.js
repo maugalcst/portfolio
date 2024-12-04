@@ -2,8 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // dark mode logic
 
-  
-  
+  document.querySelector('.change_theme').addEventListener('click', function() {
+    document.querySelector('.bxs-sun').classList.toggle('off');
+    document.querySelector('.bxs-moon').classList.toggle('off');
+  });
+
   // filter skills logic
   
   const filterButtons = document.querySelectorAll(".filter_buttons button");
